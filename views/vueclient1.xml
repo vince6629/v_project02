@@ -1,0 +1,18 @@
+<?xml version ="1.0"?>
+<odoo>
+  <!-- Action -->
+  <act_window id="action_client"
+   name="Fiche client IPNEOS"
+   res_model="client"
+   	view_mode="tree,form" />
+  <!-- Menu -->
+  <menuitem id="menu_action_client"
+	name="Gestion de client IPNEOS"
+	action="action_client" />
+  <menuitem id="menu_action_client1"
+	name="Menu 1"
+	parent ="menu_action_client"
+	action="action_client"/>
+</odoo>
+
+

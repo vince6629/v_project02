@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <record model="ir.ui.view" id="vueclient1">
+        <field name="name">client_form</field>
+        <field name="model">client</field>
+        <field name="arch" type="xml">
+
+
+             <form string="Course Form">
+		<header>
+		 <!--Buttons go here-->
+	            <button name="do_clear_done1" type="object"
+                       string="Clear Done" />
+
+		<!-- <button nane="do_1_done" type="object"
+		   string="Button 1" class="oe_highlight"  />
+		 <button nane="do_2_done" type="object"
+		   string="Button 2"  />-->
+
+		</header>
+
+
+                 <sheet>
+		   <!--Content goes here :-->
+                      <group name ="group_top">
+		       <group name="group_left">
+                            <field name="champg1"/>
+			    <field name="is_done"/>
+		       </group>	
+		       <group name="group right">
+                            <field name="champg2"/>
+                            <field name="champg3"/>
+                            <field name="champg5"/>
+                            <field name="champg6"/>
+			    <field name="annotationthirdfield"/>
+
+
+			    <field name="active"/>
+		       </group>
+		      </group>
+                 </sheet>
+             </form>
+	  
+        </field>
+   </record>
+
+ <!--  List view affichage colonne dans le module-->
+
+  <record id="treeclient" model="ir.ui.view">
+      <field name="name">deco 1</field>
+      <field name="model">client</field>
+      <field name="arch" type="xml">
+	 <tree >
+                <field name="champg3"/>
+                <field name="champg2"/>
+
+
+         </tree>
+      </field>
+ </record>
+
+    <!--  Search view
+    <record id="search" model="ir.ui.view">
+      <field name="name">client filtre</field>
+      <field name="model">client</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="champg1"/>
+          <filter string="Not Done" name="filter_not_done" domain="[('is_done','=',False)]"/>
+          <filter string="Done" domain="[('is_done','!=',False)]"/>
+        </search>
+      </field>
+    </record>-->
+
+
+</odoo>
+
